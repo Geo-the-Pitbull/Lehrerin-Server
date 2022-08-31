@@ -17,7 +17,7 @@ const mongoose = require('mongoose')
                 required: [true, 'You must specify a Gender for the teacher'],
             },
             age: {
-                type: String,
+                type: Number,
                 required: [true, 'You must specify an Age for the teacher'],
             },
             email_address: {

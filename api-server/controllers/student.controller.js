@@ -17,7 +17,7 @@ exports.create = (req, res) => {
     gender: req.body.gender,
     age: req.body.age,
     email_address: req.body.email_address,
-    group: req.body.group,
+    group_nm: req.body.group,
   });
 
   // Save a student in the database

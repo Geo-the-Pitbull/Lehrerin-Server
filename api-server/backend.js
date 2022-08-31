@@ -3,6 +3,7 @@ const cors = require("cors");
 const app = express();
 const bodyParser = require("body-parser");
 const db = require("./models");
+const multer = require("multer");
 
 const PORT = process.env.PORT || 4040
 
@@ -11,6 +12,7 @@ const teacherRoute = require('./routes/teacher.route');
 const studentRoute = require('./routes/student.route');
 const attendanceRoute = require('./routes/attendance.route');
 const noteRoute = require('./routes/note.route');
+const attDateRoute = require('./routes/attDate.route');
 
 var corsOptions = {
   origin: "http://localhost:4200"
@@ -44,6 +46,7 @@ app.use('/api/Lehrerin/Teachers', teacherRoute),
 app.use('/api/Lehrerin/Students', studentRoute),
 app.use('/api/Lehrerin/Attendances', attendanceRoute),
 app.use('/api/Lehrerin/Notes', noteRoute),
+app.use('/api/Lehrerin/AttDates', attDateRoute),
 
 // set port, listen for requests
 app.listen(PORT, () => {

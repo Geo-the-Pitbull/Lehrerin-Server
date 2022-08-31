@@ -16,7 +16,7 @@ exports.create = (req, res) => {
     student_name: req.body.student_name,
     student_group: req.body.student_group,
     teacher_name: req.body.teacher_name,
-    activity_type: req.body.activity_type,
+    activity_description: req.body.activity_description,
     mark_or_score: req.body.mark_or_score,
     comments: req.body.comments,
   });

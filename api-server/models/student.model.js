@@ -17,16 +17,16 @@ const mongoose = require('mongoose')
                 required: [true, 'You must specify a Gender for the student'],
             },
             age: {
-                type: String,
+                type: Number,
                 required: [true, 'You must specify an Age for the student'],
             },
             email_address: {
                 type: String,
                 required: [true, 'You must specify an Email Address for the student'],
             },
-            group: {
+            group_nm: {
                 type: String,
-                required: [true, 'You must place this student in a Group'],
+                required: [true, 'You must specify an Group for the student'],
             },
         },
         

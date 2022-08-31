@@ -11,5 +11,6 @@ db.Teachers = require("./teacher.model");
 db.Students = require("./student.model");
 db.Attendances = require("./attendance.model");
 db.Notes = require("./note.model");
+db.AttDates = require("./attDate.model");
 
 module.exports = db;

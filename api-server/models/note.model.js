@@ -6,7 +6,8 @@ const mongoose = require('mongoose')
 
             note_date: {
                 type: String,
-                required: [true, 'You must specify a Date'],
+                required: [true, 'You must specify a Date or this Date carries the wrong format'],
+                default: Date,
             },
             student_name: {
                 type: String,
@@ -20,7 +21,7 @@ const mongoose = require('mongoose')
                 type: String,
                 required: [true, 'You must indicate the Teacher that is making this note record'],
             },
-            activity_type: {
+            activity_description: {
                 type: String,
                 required: [true, 'You must specify the Type of Activity for this note record'],
             },

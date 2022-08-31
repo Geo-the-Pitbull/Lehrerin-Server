@@ -5,8 +5,8 @@ const mongoose = require('mongoose')
             id: String,
 
             att_date: {
-                type: String,
-                required: [true, 'You must specify a Date'],
+                type: Date,
+                required: [true, 'You must specify a Date or this Date carries the wrong format'],
             },
             student_name: {
                 type: String,
