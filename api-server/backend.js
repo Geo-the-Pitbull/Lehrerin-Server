@@ -14,6 +14,8 @@ const attendanceRoute = require('./routes/attendance.route');
 const noteRoute = require('./routes/note.route');
 const attDateRoute = require('./routes/attDate.route');
 
+const AuthRoute = require('./routes/auth');
+
 var corsOptions = {
   origin: "http://localhost:4200"
 };
@@ -47,6 +49,8 @@ app.use('/api/Lehrerin/Students', studentRoute),
 app.use('/api/Lehrerin/Attendances', attendanceRoute),
 app.use('/api/Lehrerin/Notes', noteRoute),
 app.use('/api/Lehrerin/AttDates', attDateRoute),
+
+app.use('/api', AuthRoute);
 
 // set port, listen for requests
 app.listen(PORT, () => {

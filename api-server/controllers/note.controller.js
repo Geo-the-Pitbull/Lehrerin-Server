@@ -36,8 +36,8 @@ exports.create = (req, res) => {
 
 // Retrieve all Notes from the database.
 exports.findAll = (req, res) => {
-  const note_date = req.query.note_date;
-  var condition = note_date ? { note_date: { $regex: new RegExp(note_date), $options: "i" } } : {};
+  const student_name = req.query.student_name;
+  var condition = student_name ? { student_name: { $regex: new RegExp(student_name), $options: "i" } } : {};
 
   Note.find(condition)
     .then( (data) => {
