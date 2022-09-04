@@ -1,12 +1,13 @@
 const Notes = require("../controllers/note.controller");
 const express = require('express');
 const router = express.Router()
+const authenticate = require('../middleware/authenticate')
 
 // Create a new note
 router.post("/", Notes.create);
   
 // Retrieve all notes
-router.get("/", Notes.findAll);
+router.get("/", authenticate, Notes.findAll);
   
 // Retrieve a single note with id
 router.get("/:id", Notes.findOne);
