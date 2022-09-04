@@ -4,22 +4,22 @@ const router = express.Router()
 const authenticate = require('../middleware/authenticate')
 
 // Create a new note
-router.post("/", authenticate, Notes.create);
+router.post("/", Notes.create);
   
 // Retrieve all notes
-router.get("/", authenticate, Notes.findAll);
+router.get("/", Notes.findAll);
   
 // Retrieve a single note with id
-router.get("/:id", authenticate, Notes.findOne);
+router.get("/:id", Notes.findOne);
   
 // Update a note with id
-router.put("/:id",  authenticate, Notes.update);
+router.put("/:id", Notes.update);
   
 // Delete a note with id
-router.delete("/:id",  authenticate, Notes.delete);
+router.delete("/:id", Notes.delete);
   
 // Delete all notes
-router.delete("/",  authenticate, Notes.deleteAll);
+router.delete("/", Notes.deleteAll);
   
    
 module.exports = router;

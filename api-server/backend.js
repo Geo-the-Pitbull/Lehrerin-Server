@@ -17,7 +17,7 @@ const attDateRoute = require('./routes/attDate.route');
 const AuthRoute = require('./routes/auth');
 
 var corsOptions = {
-  origin: "http://localhost:4200"
+  origin: process.env.FRONTEND_URL
 };
 
 app.use(cors(corsOptions));
