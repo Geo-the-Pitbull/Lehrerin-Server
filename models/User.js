@@ -3,16 +3,21 @@ const Schema = mongoose.Schema
 
 const userSchema = new Schema ({
     name: {
-        type: String
+        type: String,
+        required: [true, 'You must specify a Name'],
     },
     email: {
-        type: String
+        type: String,
+        required: [true, 'You must specify an Email Address'],
+        unique: true,
     },
     phone: {
-        type: String
+        type: String,
+        required: [true, 'You must specify a Phone Number or Cellphone Contact'],
     },
     password: {
-        type: String
+        type: String,
+        required: [true, 'You must specify a strong password'],
     }
 }, {timestamps: true})
 
