@@ -3,7 +3,6 @@ const cors = require("cors");
 const app = express();
 const bodyParser = require("body-parser");
 const db = require("./models");
-const multer = require("multer");
 
 const PORT = process.env.PORT || 4040
 

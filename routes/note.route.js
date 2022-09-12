@@ -1,7 +1,6 @@
 const Notes = require("../controllers/note.controller");
 const express = require('express');
 const router = express.Router()
-const authenticate = require('../middleware/authenticate')
 
 // Create a new note
 router.post("/", Notes.create);

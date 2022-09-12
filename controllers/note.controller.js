@@ -5,7 +5,13 @@ const Note = db.Notes;
 // Create and Save a new Note
 exports.create = (req, res) => {
   // Validate request
-  if (!req.body.note_date) {
+  if (!req.body.note_date,
+      !req.body.student_name,
+      !req.body.student_group,
+      !req.body.teacher_name,
+      !req.body.activity_description,
+      !req.body.mark_or_score,
+      !req.body.comments) {
     res.status(400).send({ message: "Content can not be empty!" });
     return;
   }
@@ -116,7 +122,7 @@ exports.delete = (req, res) => {
     });
 };
 
-// Delete all Students from the database.
+// Delete all Notes from the database.
 exports.deleteAll = (req, res) => {
   Note.deleteMany({})
     .then(data => {
