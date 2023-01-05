@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node backend.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
@@ -20,5 +20,9 @@
     "mongoose": "^6.5.3",
     "multer": "^1.4.5-lts.1",
     "path": "^0.12.7"
-  }
+  },
+  "engines": {
+		"node": "v14.x",
+		"npm": "8.5.0"
+	}
 }
